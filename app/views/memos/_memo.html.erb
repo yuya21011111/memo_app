@@ -1,0 +1,21 @@
+<body>
+<div id="<%= dom_id memo %>">
+<div class="contents">
+<table class="table table-bordered bg-white">
+  <div class="td_title">
+    <strong class="main_title">Title:</strong>
+    <%= link_to memo.title,memo %>
+  </div>
+</div>
+  <%
+=begin%>
+ <p>
+    <strong>Content:</strong>
+    <%= memo.content %>
+  </p> 
+<%
+=end%>
+
+</div>
+</body>
+<%= stylesheet_link_tag "test", :media => "all" %>

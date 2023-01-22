@@ -1,0 +1,28 @@
+<%= form_with(model: memo) do |form| %>
+  <% if memo.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(memo.errors.count, "error") %> prohibited this memo from being saved:</h2>
+
+      <ul>
+        <% memo.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :'タイトル' %>
+    <%= form.text_field :title, id: 'no', class:'form-control mb-3 bg-white' %>
+  </div>
+
+  <div>
+    <%= form.label :'テキスト' %>
+    <%= form.text_area :content, class:'form-control mb-3 bg-white' %>
+  </div>
+
+  <div id="post-btn">
+    <%= form.submit '投稿',class:'btn btn-block btn-dark my-3' %>
+  </div>
+<% end %>
+<%= javascript_include_tag "p.js" %>

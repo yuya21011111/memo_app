@@ -1,0 +1,17 @@
+body {
+    background-color: white;
+    background-image: linear-gradient(98deg, #3d3258,#17141e)
+}
+
+.main_title {
+    color: wheat;
+}
+
+.contents {
+    float: left;
+ }
+.td_title {
+    overflow: hidden;
+   }
+
+   /* <table class="table"> */

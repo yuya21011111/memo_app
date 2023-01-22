@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<div class="bg-white border rounded p-5">
+<h2><%= @memo.title %></h2>
+
+<p>
+  <%= @memo.content %>
+</p>
+</div>
+
+
+
+<%= link_to 'Edit',edit_memo_path(@memo) %>
+<%= link_to 'Back',memos_path %>
+<% @memos.each do |memo| %>
+<%= link_to 'destroy', memo_path(memo),
+          data: { turbo_method: 'delete', turbo_confirm: 'Are you sure?' }%>
+
+<% end %>

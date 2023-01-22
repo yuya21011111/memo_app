@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+<div class="row">
+  <div class="col-md-5">
+    <%= image_tag 'iphone11_images.png', class: "img-fluid"%>
+</div>
+<div class="col-md-7">
+<div class="text-white text-center my-5 title">
+<p>メモが簡単に登録できる！</p>
+<h1>Memoアプリ</h1>
+</div>
+<div id="memos">
+  <% @memos.each do |memo| %>
+   
+
+  <div class="list-group">
+  <%= link_to memo.title,memo,class:'list-group-item list-group-item-action' %>
+<% end %>
+</div>
+</div>
+
+<%= link_to "新規登録", new_memo_path,class:'btn btn-block btn-outline-dark my-5' %>
+
+  </div>
+</div>
+
